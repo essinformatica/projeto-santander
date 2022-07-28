@@ -167,14 +167,6 @@ async function procurarFilme(query: string): Promise<IFilmeResposta> {
   return result
 }
 
-// async function adicionarFilme(filmeId: number) {
-//   let result = await HttpClient.get({
-//     url: `https://api.themoviedb.org/3/movie/${filmeId}?api_key=${apiKey}&language=en-US`,
-//     method: "GET"
-//   })
-//   console.log(result);
-// }
-
 async function criarLista(nomeDaLista: string, descricao: string) {
   let result = await HttpClient.get<ICreateList>({
     url: `https://api.themoviedb.org/3/list?api_key=${apiKey}&session_id=${sessionId}`,
